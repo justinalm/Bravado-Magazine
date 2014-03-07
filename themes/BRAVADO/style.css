@@ -1,0 +1,1158 @@
+/*
+Theme Name: BRAVADO MAGAZINE.
+Theme URI: http://www.bravadomag.com
+Description: The custom theme for BRAVADO MAGAZINE.
+Version: 1.0
+Author: Interaction Designer Justin Alm
+Author URI: www.justinalm.com
+*/
+
+@font-face {font-family:"Lekton-Regular"; src: url(fonts/Lekton-Regular.ttf) format('truetype');}
+
+@font-face {font-family:"Lekton-Italic"; src: url(fonts/Lekton-Italic.ttf) format('truetype');}
+
+@font-face {font-family:"Lekton-Bold"; src: url(fonts/Lekton-Bold.ttf) format('truetype');}
+
+@font-face {font-family:"TradeGothic-LTStd-Light"; src: url(fonts/TradeGothicLTStd-Light.otf) format('opentype');}
+
+@font-face {font-family:"TradeGothic-LTStd-LightObl"; src: url(fonts/TradeGothicLTStd-LightObl.otf) format('opentype');}
+
+@font-face {font-family:"TradeGothic-LTStd"; src: url(fonts/TradeGothicLTStd.otf) format('opentype');}
+
+@font-face {font-family:"TradeGothic-Cond"; src: url(fonts/TradeGothicLTStd-BdCn20.otf) format('opentype');}
+
+@font-face {font-family:"TradeGothic-CondBold"; src: url(fonts/TradeGothic-CondBold.otf) format('opentype');}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  background: url(images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Cover CSS for Fullscreen Background image. */
+
+body {
+  margin: 0;
+}
+
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:active {
+  color: #c6c6c6;
+  text-decoration: none;
+}
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+li.img_right {
+  margin: 0;
+}
+
+p.info {
+  width: 510px;
+  font-family: "Lekton-Regular";
+  font-weight: normal;
+  font-size: 16px;
+  color: #000;
+  line-height: 25px;
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+
+.info_content_wrapper {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+
+#info_type {
+  position: absolute;
+  float: right;
+  bottom: 0px;
+  right: 26px;
+  background-image: url(images/info.png);
+  height: 188px;
+  width: 438px;
+}
+
+.info_content {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  margin: 20px 0 20px 0;
+}
+
+.search_bar {
+  display:hidden;
+  position: relative;
+  float: right;
+  background-color: #000;
+  width: 100%;
+  height: auto;
+  margin: 0 0 0 0;
+  padding: 0 18px 10px 0;
+}
+
+/* These styles are for the loading .gif that is displayed until the page is loaded */
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+#loading-image {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 100;
+  margin-left: -50px;
+}
+
+/*
+Slides container
+Important:
+Set the width of your slides container
+Set to display none, prevents content flash
+*/
+
+#slides_wrapper {
+  display: block;
+  position: relative;
+  width: 960px;
+  height: 450px;
+  margin: 0 auto 0 auto;
+}
+
+.slides_container {
+position: relative;
+width:960px;
+height: 535px;
+display:none;
+}
+
+/*
+Each slide
+Important:
+Set the width of your slides
+If height not specified height will be set by the slide content
+Set to display block
+*/
+.slides_container div {
+position: relative;
+z-index: -1;
+top: 0;
+left: 0;
+width:960px;
+height:450px;
+display:block;
+}
+
+.slides_container div img{
+position: relative;
+margin: 0 auto 0 auto;
+
+}
+
+.header-fullwidth {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+}
+
+h1.logo {
+  display: block;
+  float: left;
+  position: absolute;
+  background-image: url(images/bravado_logo.png);
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 30px;
+  margin: 10px 0 0 15px;
+}
+
+.header-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+/* This is the 960px wrapper that houses all of the content between the header and footer. */
+
+.wrapper {
+  position: relative;
+  width: 960px;
+  margin: 0px auto 0px auto;
+}
+
+/* This is the large BRAVADO wordmark at the centre of the homepage. */
+
+.blackbar {
+  display: block;
+  width: 100%;
+  height: 15px;
+  background-color: #000;
+}
+
+.home-logo-fullwidth {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0px auto;
+}
+
+h1.home-logo {
+  display: block;
+  position: relative;
+  width: 960px;
+  height: 192px;
+  background-image: url(images/bravado_home4.png);
+  margin: 0 auto 0 auto;
+}
+
+.cat-icon-container {
+  display: block;
+  position: absolute;
+  float: left;
+  width: auto;
+  height: 50px;
+  color: #fff;
+  font-family: "TradeGothic-Cond";
+  list-style-type: none;
+  font-weight: normal;
+  font-size: 19px;
+  letter-spacing: 3px;
+  margin: 0 0 0 195px;
+}
+
+.category-icon {
+  display: block;
+  position: relative;
+  float: left;
+  background-color: transparent;
+  margin: 25px 30px 0 0;
+}
+
+
+/* These styles place a TOC navigation centre bottom on the homepage. */
+
+.nav-fullwidth {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  margin: 0 auto 0 auto;
+  padding: 0 0 10px 0;
+}
+
+.nav-container{
+  display: block;
+  position: relative;
+  width: 960px;
+  height: auto;
+  margin: 0 auto 0 auto;
+  background-color: transparent;
+  padding: 30px 15px 20px 15px;
+}
+
+.nav-col1 {
+  display: block;
+  position: relative;
+  float: left;
+  width: 465px;
+  height: auto;
+  margin: 0 30px 0 0;
+}
+
+.nav-col2 {
+  display: block;
+  position: relative;
+  float: right;
+  width: 465px;
+  height: auto;
+  margin: 0 0 0 0;
+}
+
+.toc-article-block {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: right;
+  width: 465px;
+  height: 88px;
+  margin: 0 0 30px 0;
+  border-top-style: solid;
+  border-top-width: 1px; 
+  border-top-color: #fff;
+}
+
+.toc-category-col1 {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 217px;
+  height: auto;
+  margin: 2px 30px 15px 0;
+  border-top-style: solid;
+  border-top-width: 1px; 
+  border-top-color: #fff;
+}
+
+.toc-category-col2 {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 217px;
+  height: auto;
+  margin: 2px 0px 15px 0;
+  border-top-style: solid;
+  border-top-width: 1px; 
+  border-top-color: #fff;
+}
+
+/* These paragraph styles are for the TOC nav on the homepage. */
+
+h3.toc-header {
+  font-family: "TradeGothic-CondBold";
+  font-size: 27px;
+  font-weight: normal;
+  color: #fff;
+  text-align: right;
+  line-height: 27px;
+  letter-spacing: 3px;
+  margin: 5px 0 0 45px;
+}
+
+p.toc-header {
+  font-family: "TradeGothic-CondBold";
+  font-size: 27px;
+  font-weight: normal;
+  color: #fff;
+  text-align: right;
+  line-height: 27px;
+  letter-spacing: 3px;
+  margin: 2px 0 0 45px;
+}
+
+p.search-header {
+  font-family: "TradeGothic-CondBold";
+  font-size: 27px;
+  font-weight: normal;
+  color: #000;
+  text-align: left;
+  line-height: 27px;
+  letter-spacing: 3px;
+  margin: 50px 0 0 15px;
+}
+
+h2.toc-category {
+  font-family: "TradeGothic-LTStd";
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 5px 0 -16px 0;
+}
+
+h2.toc-category-small {
+  font-family: "TradeGothic-LTStd";
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 5px 0 15px 0;
+}
+
+.small-art-title {
+font-family: "TradeGothic-CondBold";
+font-size: 12px;
+font-weight: normal;
+color: #fff;
+text-align: left;
+line-height: 15px;
+letter-spacing: 3px;
+margin: 0 0 15px 0;
+}
+
+/* These styles are for the article blocks and the article thumbnails and text that is nested within those blocks. The homepage is essentially a two column grid that sources two of the latest articles from each category BRAVADO publishes under. */
+
+.articles {
+  position: relative;
+  float: left;
+  width: 960px;
+}
+
+#chip{
+  position: relative;
+  float: left;
+  background-image: url(images/chip.png);
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 130px;
+}
+
+.article-block {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 445px;
+  height: 200px;
+  background-color: transparent;
+  margin: 0px 0 30px 20px;
+}
+
+.art-thumb{
+  position: relative;
+  display: block;
+  float: left;
+  width: 172px;
+  height: 202px;
+  background-color: transparent;
+}
+
+.art-text1 {
+  position: relative;
+  display: block;
+  float: left;
+  width: 250px;
+  height: 202px;
+  margin: 0 8px 0 15px;
+  background-color: transparent;
+  text-align: right;
+}
+
+.art-text2 {
+  position: relative;
+  display: block;
+  float: left;
+  width: 250px;
+  height: 202px;
+  margin: 0 8px 0 15px;
+  background-color: transparent;
+  text-align: left;
+}
+
+.art-thumb img{
+  position: relative;
+  display: block;
+  float: left;
+  width: 172px;
+  height: 202px;
+  background-color: transparent;
+}
+
+/* Pagination Styles */
+
+.navigation {
+  width: 100%;
+  font-family: "TradeGothic-CondBold";
+  font-size: 30px;
+  font-weight: normal;
+  color: #000;
+}
+
+.navigation a {
+  color: #000;
+}
+
+.navigation a:hover {
+  color: #ccc;
+}
+
+.alignleft{
+  float: left;
+  margin: 0 0 15px 0;
+}
+
+.alignright{
+  float: right;
+  margin: 0 0 15px 0;
+}
+
+/* Category Styles */
+
+.category-feature {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 960px;
+  height: 750px;
+  background-color: transparent;
+  margin: 0 0 15px 0;
+}
+
+.feature-img {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 750px;
+  background-color: transparent;
+}
+
+.feature-text {
+  position: relative;
+  float: right;
+  width: 445px;
+  background-color: transparent;
+  margin: 420px 0 0 15px;
+}
+
+p.feature-header {
+  font-family: "TradeGothic-CondBold";
+  font-size: 50px;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+  line-height: 45px;
+  letter-spacing: 1px;
+}
+
+p.feature-teaser {
+  font-family: "Lekton-Regular";
+  font-size: 19px;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+  line-height: 26px;
+}
+
+/* These are the basic HTML text styles. */
+
+h1 {
+  font-family: "TradeGothic-CondBold";
+  font-weight: normal;
+  letter-spacing: 8px;
+  color: #fff;
+  margin: 11px 0px 0px 0px;
+}
+
+h2 {
+  font-family: "TradeGothic-CondBold";
+  font-weight: normal;
+  font-size: 28px;
+  color: #fff;
+  text-align: left;
+  margin: 0 0 -10px 0;
+}
+
+h2.info {
+  font-family: "TradeGothic-CondBold";
+  font-weight: normal;
+  font-size: 28px;
+  color: #000;
+  letter-spacing: 3px;
+  text-align: left;
+  margin: 0 0 -10px 0;
+}
+
+h3 {
+  font-family: "TradeGothic-CondBold";
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 40px 0px 5px 0px;
+}
+
+nav {
+  font-family: "TradeGothic-Cond";
+  list-style-type: none;
+  font-weight: normal;
+  margin: 0px 15px 0px 0px;
+}
+
+nav form#searchform {
+  position: relative;
+  float: right;
+  margin: 20px 0 0 30px;
+}
+
+nav input#s.field {
+  font-family: monospace;
+}
+
+li {
+  text-decoration: none;
+  font-weight: normal;
+  letter-spacing: 3px;
+  float: right;
+  color: #fff;
+  margin: 26px 0 0 30px;
+  font-size: 18px;
+}
+
+li.search {
+  text-decoration: none;
+  font-weight: normal;
+  letter-spacing: 3px;
+  float: right;
+  color: #fff;
+  font-size: 18px;
+}
+
+ul.cat-lists{
+  float: left;
+  margin: 20px 20px 0 0;
+}
+
+li#small-art-title {
+  font-family: "TradeGothic-CondBold";
+  font-size: 12px;
+  font-weight: normal;
+  float: left;
+  color: #fff;
+  text-align: left;
+  line-height: 15px;
+  letter-spacing: 3px;
+  margin: 0 10px 15px 0;
+}
+
+p.sorry {
+  font-family: "TradeGothic-CondBold";
+  font-weight: normal;
+  text-decoration: none;
+  font-weight: normal;
+  color: #000;
+  padding: 38px 0 0 0;
+  font-size: 92px;
+  letter-spacing: 0.9px;
+  line-height: 104px;
+}
+
+p.again {
+  font-family: "TradeGothic-CondBold";
+  font-weight: normal;
+  text-decoration: none;
+  font-weight: normal;
+  color: #000;
+  padding: 85px 0 50px 0;
+  font-size: 72px;
+  letter-spacing: 1px;
+}
+
+.entry-content{
+}
+
+p {
+  font-family: "Lekton-Regular";
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+p.copyright {
+  width: 510px;
+  font-family: "Lekton-Regular";
+  font-weight: normal;
+  font-size: 14px;
+  color: #000;
+  line-height: 22px;
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+
+p.copyright-footer {
+  width: 510px;
+  position: relative;
+  float: right;
+  font-family: "Lekton-Regular";
+  font-weight: normal;
+  font-size: 11px;
+  color: #fff;
+  line-height: 22px;
+  margin: 15px 0 0 0;
+  text-align: right;
+}
+
+/* This style creates the fullwidth black band that runs along the footer of each page. */
+
+#footer {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 100%;
+}
+
+/* These styles are for the category page template. */
+
+h2.category-header {
+  position: relative;
+  display: block;
+  float: left;
+  width: auto;
+  height: 180px;
+  background-color: transparent;
+  overflow: hidden;
+  margin: 0;
+}
+
+.category-header img {
+  position: relative;
+  float: left;
+  display: block;
+}
+
+.art-header {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 0;
+  display: block;
+  width: 960px;
+  height: 185px;
+  background-image: url(images/FASHION-header.png);
+  background-color: transparent;
+  margin: 0 0 0 15px;
+}
+
+.cat-article-block2 {
+  position: relative;
+  float: left;
+  width: 960px;
+  height: 535px;
+  background-color: transparent;
+  margin: 0 0 30px 0;
+}
+
+.cat-article-block2 img {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.cat-article-block2-text {
+  position: absolute;
+  text-align: right;
+  z-index: 4;
+  background-color: #000;
+  right: 0;
+  bottom: 0;
+}
+
+h3.cat-article-header2 {
+  font-family: "TradeGothic-CondBold";
+  font-size: 60px;
+  font-weight: normal;
+  color: white;
+  text-align: right;
+  line-height: 55px;
+  margin: 2px -6px 0 -4px;
+}
+
+h3.cat-article-header2 a {
+  color: #fff;
+}
+
+p.cat-article-teaser2 {
+  float: right;
+  font-family: "Lekton-Regular";
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff;
+  text-align: right;
+  line-height: 21px;
+  word-spacing: 0px;
+  margin: 0 12px 7px 0;
+  width: 510px;
+}
+
+/* Article Styles */
+
+#art-feature-wrapper {
+  display: block;
+  position: relative;
+  width: 960px;
+  height: 450px;
+  margin: 0 auto 0 auto;
+}
+
+#article-container {
+  position: relative;
+  float: left;
+  width: 960px;
+  height: auto;
+}
+
+img.attachment-thumbnail {
+  width: 673px;
+  height: 470px;
+  float: left;
+}
+
+img.attachment-medium {
+  position: relative;
+  float: left;
+  width: 960px;
+  height: 600px;
+}
+
+img.attachment-large {
+  position: relative;
+  width: 960px;
+  height: 450px;
+  float: right;
+}
+
+img.attachment-full {
+  width: 960px;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+#art-feature-img {
+  width: 960px;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+#art-feature-img img{
+  float: right;
+}
+
+#article-header-box{
+  position: relative;
+  float: left;
+  margin: -45px 0 0 0;
+  width: 900px;
+  height: 152px;
+  background-color: #000;
+  
+}
+
+#header-box-butt {
+  position: absolute;
+  top: 0px;
+  right: -46px;
+  height: 152px;
+  width: 46px;
+  background-image: url(images/header-butt.png);
+}
+
+#pullquote {
+  position: relative;
+  display: inline;
+  float: left;
+  margin: -230px 0 0px 79px;
+  width: 882px;
+  height: 190px;
+  background-color: #000;
+}
+
+#pullquote-butt {
+  position: absolute;
+  top: 0px;
+  left: -55px;
+  height: 190px;
+  width: 55px;
+  background-image: url(images/pullquote-butt.png);
+}
+
+h2.headline {
+  font-family: "TradeGothic-CondBold";
+  font-size: 99px;
+  font-weight: normal;
+  color: #fff;
+  text-align: left;
+  line-height: 82px;
+  margin: 8px 0 0 -8px;
+  letter-spacing: 0px;
+}
+
+p.headline {
+  font-family: "TradeGothic-CondBold";
+  font-size: 98px;
+  font-weight: normal;
+  color: #fff;
+  text-align: left;
+  line-height: 82px;
+  margin: 8px 0 0 -8px;
+}
+
+#text-body {
+  position: relative;
+  float: left;
+  width: 960px;
+  height: auto;
+}
+
+#body-col {
+  position: relative;
+  float: left;
+  width: 500px;
+  margin: -30px 0 30px 0;
+}
+
+p.lead-para {
+  font-family: "Lekton-Italic";
+  font-size: 32px;
+  font-weight: normal;
+  color: #000;
+  text-align: right;
+  line-height: 47px;
+  letter-spacing: 2px;
+  margin: 55px auto 65px auto;
+}
+
+p.body-copy {
+  font-family: "Lekton-Regular";
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0 30px 15px 0;
+}
+
+p.question {
+  font-family: "Lekton-Bold";
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 30px 30px 0 0;
+}
+
+p.question a{
+  color: #000;
+  text-decoration: underline;
+}
+
+p.meta-data {
+  font-family: "Lekton-Regular";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  margin: 30px 0 0 0;
+}
+
+p.pullquote {
+  font-family: "Lekton-Italic";
+  font-size: 35px;
+  font-weight: normal;
+  color: white;
+  text-align: right;
+  line-height: 41px;
+  margin: 15px 22px 0 0;
+}
+
+/*
+Slides container
+Important:
+Set the width of your slides container
+Set to display none, prevents content flash
+*/
+#article_slides .slides_container {
+  width: 467px;
+  height: 637px;
+  display: none;
+  margin: -350px 0 0 494px;
+}
+
+#social {
+  position: relative;
+  float: left;
+  width: 450px;
+  margin: 0 0 10px 0;
+}
+
+#facebook {
+  position: relative;
+  float: left;
+  width: 450px;
+  height: auto;
+  display: block;
+  color: #000;
+  margin: 10px 0 0 0;
+}
+
+#facebook a {
+  position: relative;
+  float: left;
+  width: 450px;
+  height: auto;
+  display: block;
+  color: #000;
+}
+
+#twitter {
+  position: relative;
+  float: left;
+  width: 450px;
+  display: block;
+  color: #000;
+}
+
+#twitter a {
+  position: relative;
+  float: left;
+  width: 450px;
+  display: block;
+  color: #000;
+}
+
+/*
+Each slide
+Important:
+Set the width of your slides
+If height not specified height will be set by the slide content
+Set to display block
+*/
+
+#articles_slides .slides_container div {
+  width:467px;
+  height:637px;
+  display:block;
+}
+
+#arrows {
+  position: absolute;
+  width: 67px;
+  height: auto;
+  z-index: 5;
+  margin: 640px 0 0 900px;
+}
+
+#articles_slides .next,{
+  position: relative;
+  float: right;
+  display:block;
+}
+
+#articles_slides .prev {
+  position: relative;
+  float: left;
+  display:block;
+}
+
+a.prev img{
+  margin: 0 0 0 -15px;
+}
+
+/*
+Each slide
+Important:
+Set the width of your slides
+If height not specified height will be set by the slide content
+Set to display block
+*/
+
+#articles_slides2 .slides_container div {
+  width:960px;
+  height:535px;
+  display:block;
+  margin: 20px 0 0 0;
+}
+
+#arrows2 {
+  position: absolute;
+  width: 67px;
+  height: auto;
+  z-index: 5;
+  margin: 550px 0 0 900px;
+}
+
+#articles_slides .next,{
+  position: relative;
+  float: right;
+  display:block;
+}
+
+#articles_slides .prev {
+  position: relative;
+  float: left;
+  display:block;
+}
+
+a.prev img{
+  margin: 0 0 0 -15px;
+}
+
+/* Pagination */
+.pagination {margin: 0 0 17px 0;}
+.page-numbers { font-family: "TradeGothic-CondBold"; font-size: 30px; color: #000; background-color: #fff; padding: 10px 10px 0 10px; border:1px solid #ccc;}
+.page-numbers.current { color: #fff; background-color: #000;}
+.page-numbers .dots { letter-spacing: 10px }
+a.page-numbers  { font-size: 30px; color: #000; }
+a.page-numbers:hover  { font-size: 30px; color: #fff; background-color: #000;}
